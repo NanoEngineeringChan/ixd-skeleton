@@ -4,24 +4,28 @@
 			"id" : "0",
 			"species": "Dog",
 			"description": "Man's best friend",
+			"donate": "Focus with the dog and donate to the Lucky Dog Animal Rescue Center",
 			"imageURL": "./images/cogs 120 dog.png" 
 		},
 		{
 			"id": "1",
 			"species": "Bear",
 			"description": "Always wants to cuddle",
+			"donate": "Focus with the bear and donate to the Free the Bears organization",
 			"imageURL": "/images/cogs 120 bear.png"
 		},
 		{
 			"id": "2",
 			"species": "Pig",
 			"description": "Oink oink!",
+			"donate": "Focus with the pig and donate to the PIGS animal sanctuary",
 			"imageURL": "/images/cogs 120 pig.png"
 		},
 		{
 			"id": "3",
 			"species": "Tiger",
 			"description": "Rawr!",
+			"donate": "Focus with the tiger and donate to the World Wildlife Foundation",
 			"imageURL": "/images/cogs 120 tiger.png"
 		}
 	]
