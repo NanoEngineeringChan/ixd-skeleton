@@ -9,8 +9,6 @@
 	<script src="/js/alertify.min.js"></script>
 	<link href = "/css/alertify.min.css" rel="stylesheet"/>
 	<link href ="/css/default.min.css" rel="stylesheet"/>
-	<!-- <iframe src ="playAlt" style ="display:none;"></iframe>
-	<meta http-equiv="refresh" content="3"/> -->
 
 	<head>
 
@@ -80,6 +78,8 @@
 			var done = false;
 			var off = true;
 
+
+			var totalOff = 0;
 			var totalTime = processInput();
 			var count = totalTime/100;
 			var productivityWidth = 100;
@@ -103,6 +103,7 @@
 			function move() {
 				//get the total time from this function into variable time
 				//make that progress bar move
+				setInterval(intervalTime, 1000);
 				var elem = document.getElementById("progressBar");
 				var elem2 = document.getElementById("productivityBar");
 				var width = 1;

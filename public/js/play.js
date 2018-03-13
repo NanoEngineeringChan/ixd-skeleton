@@ -1,20 +1,20 @@
-//calculate total productivity time. Should be 100% initially, then decrease if the user is not being producitive
-            // function calculate() {
-            //     var elem = document.getElementById("productivityBar");
-            //         var id2 = setInterval(decrease, count);
-            //         function decrease() {
-            //             if (productivityWidth <= 0) {
-            //                 clearInterval(id2);
-            //             } else if (document.hasFocus()) {
-            //                 clearInterval(id2);
-            //             } else {
-            //                 productivityWidth--;
-            //                 elem.style.width = productivityWidth + '%';
-            //                 elem.innerHTML = productivityWidth * 1 + '%';
-                            
-            //             }
-            //     }
-            // }
+
+function getTime() {
+    return (new Date()).getTime();
+}
+
+var lastInterval = getTime();
+
+function intervalTime() {
+    var now = getTime();
+    var diff = now - lastInterval;
+    var offBy = diff - 1000;
+    lastInterval = now;
+
+    if(offBy > 100) {
+        console.log("off for this many seconds: " + offBy);
+    }
+}
 
 
 function completeTask (){
@@ -45,15 +45,15 @@ function completeTask (){
                     
         //}, 10);
     //}
-	var percentage = productivityWidth;
-	//localStorage.setItem("percent", percentage);
+    var percentage = productivityWidth;
+    //localStorage.setItem("percent", percentage);
 
-       				// var d = new Date();
-        			// var days = ["Sun", "M", "T", "W", "Th", "F", "Sat"];
-        			// var dayToday = days[d.getDay()];
-           //  		if(dayToday == "Sun"){
+                    // var d = new Date();
+                    // var days = ["Sun", "M", "T", "W", "Th", "F", "Sat"];
+                    // var dayToday = days[d.getDay()];
+           //       if(dayToday == "Sun"){
                 
-           //  		}
+           //       }
            var b = JSON.parse(localStorage.getItem("percent"));
             if (b.length >= 5) {
                 var c = []
@@ -84,25 +84,25 @@ function completeTask (){
 //         $.getJSON("../workdata", function(json) {
 //         var array = [];
 //             for (var key in json) {
-// 				if (json.hasOwnProperty(key)) {
-// 			        var item = json[key];
-// 			        array.push({
-// 			            date: item.date,
-// 			            series: item.series
+//              if (json.hasOwnProperty(key)) {
+//                  var item = json[key];
+//                  array.push({
+//                      date: item.date,
+//                      series: item.series
 
-// 			    	});
-// 			    }
-// 			}
-// 		});
-// 		var fs = require("fs");
-// 		var lineGraph = [];
+//                  });
+//              }
+//          }
+//      });
+//      var fs = require("fs");
+//      var lineGraph = [];
 
 
-// 		fs.writeFile("./workdata.json", JSON.stringify(percentage), (err) => {
-// 			if(err){
-// 				console.error(err);
-// 				return;
-// 			}
-// 				console.log("success");
-// 		});
+//      fs.writeFile("./workdata.json", JSON.stringify(percentage), (err) => {
+//          if(err){
+//              console.error(err);
+//              return;
+//          }
+//              console.log("success");
+//      });
 //}
