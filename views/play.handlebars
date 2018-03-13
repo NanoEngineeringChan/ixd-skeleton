@@ -58,25 +58,32 @@
 				    $("#clickButton").trigger('click'); 
 				    $("#clickButton").hide();
 				});
-//an attempt to get the timer to stay accurate when screen turns off 
+
+//an attempt to get the timer to stay accurate when screen turns off//
+
+				//grabs ya the current time
 				function getTime() {
 		            return (new Date()).getTime();
 		        }
 
+		        //get time right now
 		        var lastInterval = getTime();
 
+		        //will return offBy value to add to timer by calculating when js stops
 		        function screenOffDifference() {
-		            var now = getTime();
-		            var diff = now - lastInterval;
-		            var offBy = diff - 1000; // 1000 = the 1 second delay I was expecting
+		         //get time right now and subtract previous time
+		            var diff = getTime() - lastInterval;
+		            // 1000 = 1 second delay
+		            var offBy = diff - 1000; 
+		            //update time 
 		            lastInterval = now;
-
-		            if(offBy > 100) { // don't trigger on small stutters less than 100ms
+		            // don't trigger on small stutters less than 100ms
+		            if(offBy > 100) { 
 		                console.log('screen - off by ' + offBy + 'ms');
 		            }
 		        }
 
-
+		        //get Off by every second.
 				setInterval(screenOffDifference, 1000);  
 
 			</script>
