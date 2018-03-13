@@ -12,11 +12,12 @@ function intervalTime() {
     var offBy = diff - 1000;
     lastInterval = now;
 
-    if(offBy > 1000) {
+    if(offBy > 100) {
         offBy = offBy * 10;
         totalOff += offBy;
         console.log("off for this many seconds: " + totalOff);
     }
+    console.log("adding " + totalOff + " amount of time");
 }
 
 
