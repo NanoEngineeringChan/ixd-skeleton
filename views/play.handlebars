@@ -88,7 +88,7 @@
 
 			</script>
 
- 		
+ 			<meta http-equiv="refresh" content="3"/>
 			<script>
 
 			var done = false;
@@ -115,6 +115,7 @@
 			function move() {
 				//get the total time from this function into variable time
 				//make that progress bar move
+				setInterval(intervalTime, 1000);
 				var elem = document.getElementById("progressBar");
 				var elem2 = document.getElementById("productivityBar");
 				var width = 1;
