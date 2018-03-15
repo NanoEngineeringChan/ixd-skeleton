@@ -8,11 +8,11 @@
 	
 				<title>FocusFriend</title>
 		<center>
-			<h1>Sign Up or Log In</h1>
+			<h1>Sign Up or Log In<br/></h1>
 	</head>
 	<body>
-		<br>
-		<h4>Sign in to Facebook</h4>
+	
+		<h4>Sign in to Facebook:<br/></h4>
 		<script>
 			console.log(sessionStorage.getItem("logged"));
 			if (sessionStorage.getItem("logged") == true) {
@@ -22,7 +22,6 @@
 			}
 		</script>
 		<p class="facebookLogin">
-			<br>
 				<fb:login-button scope ="public_profile,email" onlogin ="checkLoginState();" size="xlarge">
 				</fb:login-button>
 			</p>
@@ -36,7 +35,7 @@
 				};
 			</script>
 		</div>
-		<br>
+		
 		<div class = "signingUp">
 			<h4>No account?</h4>
 			<button id = "signUp">Sign Up</button>
