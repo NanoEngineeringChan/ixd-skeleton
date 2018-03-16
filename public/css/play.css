@@ -5,6 +5,16 @@ body {
 	padding: 0;
 }
 
+#image {
+    width:  500px;
+    height: 500px;
+}
+
+#imgCont {
+
+    width:  500px;
+    height: 500px;
+}
 
 #userProgress {
 	width: 70%;
